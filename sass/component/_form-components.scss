@@ -1,0 +1,45 @@
+button {
+  width: 100%;
+  border-radius: 5px;
+  min-height: 4rem;
+  background-color: $very-dark-cyan;
+  color: $white;
+}
+
+#reset_calc {
+  background-color: $strong-cyan;
+  text-transform: uppercase;
+  color: $very-dark-cyan;
+  margin-top: 2rem;
+}
+
+input {
+  background-color: $light-grayish-cyan-2;
+  min-height: 4rem;
+  border-radius: 5px;
+  text-align: right;
+  color: $very-dark-cyan;
+  padding: 1rem;
+
+  &:focus-visible {
+    outline: 2px solid $light-grayish-cyan;
+  }
+
+  &:not(#custom) {
+    margin-top: 1rem;
+  }
+}
+
+#bill {
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 15px;
+}
+
+#num-of-ppl {
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 15px;
+}

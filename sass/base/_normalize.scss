@@ -1,0 +1,29 @@
+/*Custom normalize CSS*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  border-width: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  appearance: none;
+  border: none;
+}
+
+input {
+  border: none;
+}

@@ -28,6 +28,18 @@ input {
   border: none;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -124,6 +136,9 @@ main {
   background-color: #00494d;
   border-radius: 10px;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .app__results--line {
   display: flex;
@@ -172,6 +187,12 @@ button {
   min-height: 4rem;
   background-color: #00494d;
   color: white;
+  transition: all 285ms ease-in-out;
+}
+button:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+  cursor: pointer;
 }
 
 #reset_calc {
@@ -179,6 +200,12 @@ button {
   text-transform: uppercase;
   color: #00494d;
   margin-top: 2rem;
+  min-height: 50px;
+}
+#reset_calc:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+  cursor: pointer;
 }
 
 input {
@@ -208,6 +235,57 @@ input:not(#custom) {
   background-repeat: no-repeat;
   background-position: 10px center;
   background-size: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 10rem 20rem;
+  }
+
+  .app {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .app::before {
+    top: -120px;
+  }
+  .app .amount-selection {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+  }
+  .app .amount-selection label {
+    grid-row: 1/2;
+    grid-column: 1/4;
+  }
+  .app__results {
+    flex-basis: 100%;
+    padding: 5rem;
+  }
+  .app__results--line {
+    gap: 4rem;
+  }
+}
+.tip__amount--result,
+.tip__total--result {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .app {
+    gap: 2rem;
+  }
+  .app__inputs {
+    flex: 1;
+  }
+  .app__results {
+    flex: 1;
+    padding: 3rem;
+  }
+
+  .tip__amount--result,
+.tip__total--result {
+    font-size: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,13 @@ button {
   min-height: 4rem;
   background-color: $very-dark-cyan;
   color: $white;
+  transition: $basic;
+
+  &:hover {
+    background-color: $light-grayish-cyan;
+    color: $very-dark-cyan;
+    cursor: pointer;
+  }
 }
 
 #reset_calc {
@@ -11,6 +18,13 @@ button {
   text-transform: uppercase;
   color: $very-dark-cyan;
   margin-top: 2rem;
+  min-height: 50px;
+
+  &:hover {
+    background-color: $light-grayish-cyan;
+    color: $very-dark-cyan;
+    cursor: pointer;
+  }
 }
 
 input {

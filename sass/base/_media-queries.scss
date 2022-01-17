@@ -1,0 +1,58 @@
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 10rem 20rem;
+  }
+
+  .app {
+    flex-direction: row;
+    gap: 5rem;
+
+    &::before {
+      top: -120px;
+    }
+
+    .amount-selection {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 1fr 1fr;
+
+      label {
+        grid-row: 1/2;
+        grid-column: 1/4;
+      }
+    }
+
+    &__results {
+      flex-basis: 100%;
+      padding: 5rem;
+
+      &--line {
+        gap: 4rem;
+      }
+    }
+  }
+}
+
+.tip__amount--result,
+.tip__total--result {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .app {
+    gap: 2rem;
+
+    &__inputs {
+      flex: 1;
+    }
+
+    &__results {
+      flex: 1;
+      padding: 3rem;
+    }
+  }
+
+  .tip__amount--result,
+  .tip__total--result {
+    font-size: 2.5rem;
+  }
+}

@@ -51,8 +51,14 @@ body {
 
 label {
   font-size: 1.5rem;
-  color: #5e7a7d;
+  color: hsl(186deg, 14%, 43%);
   font-weight: 700;
+}
+
+.alert {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(6deg, 48%, 63%);
 }
 
 input {
@@ -68,8 +74,8 @@ button {
 }
 
 a {
-  background-color: #00494d;
-  color: white;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 700;
   transition: all 285ms ease-in-out;
 }
@@ -85,8 +91,8 @@ input {
 
 footer {
   min-height: 50px;
-  background-color: #26c0ab;
-  color: #00494d;
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,7 +103,7 @@ footer {
 
 main {
   min-height: calc(100vh - 50px);
-  background-color: #c5e4e7;
+  background-color: hsl(185deg, 41%, 84%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +112,7 @@ main {
 .app {
   min-height: 50vh;
   margin: 10rem 0;
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   border-radius: 15px;
   padding: 2rem;
   position: relative;
@@ -122,7 +128,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   top: -80px;
-  color: #5e7a7d;
+  color: hsl(186deg, 14%, 43%);
   font-weight: 700;
   width: 90px;
   line-height: 2.8rem;
@@ -133,7 +139,7 @@ main {
   flex-direction: column;
 }
 .app__results {
-  background-color: #00494d;
+  background-color: hsl(183deg, 100%, 15%);
   border-radius: 10px;
   padding: 2rem;
   display: flex;
@@ -170,54 +176,71 @@ main {
   flex-direction: column;
 }
 .tip__amount span:first-child, .tip__total span:first-child {
-  color: white;
+  color: hsl(0deg, 0%, 100%);
 }
 .tip__amount span:last-child, .tip__total span:last-child {
   font-size: 1.5rem;
-  color: #5e7a7d;
+  color: hsl(186deg, 14%, 43%);
 }
 .tip__amount--result, .tip__total--result {
-  color: #26c0ab;
+  color: hsl(172deg, 67%, 45%);
   font-weight: 700;
+}
+
+.label {
+  display: flex;
+}
+.label > label {
+  flex: 1;
+}
+
+.input-alert {
+  outline: 2px solid hsl(6deg, 48%, 63%) !important;
 }
 
 button {
   width: 100%;
   border-radius: 5px;
   min-height: 4rem;
-  background-color: #00494d;
-  color: white;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
   transition: all 285ms ease-in-out;
 }
 button:hover {
-  background-color: #c5e4e7;
-  color: #00494d;
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(183deg, 100%, 15%);
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(183deg, 100%, 15%);
   cursor: pointer;
 }
 
 #reset_calc {
-  background-color: #26c0ab;
+  background-color: hsl(172deg, 67%, 45%);
   text-transform: uppercase;
-  color: #00494d;
+  color: hsl(183deg, 100%, 15%);
   margin-top: 2rem;
   min-height: 50px;
 }
 #reset_calc:hover {
-  background-color: #c5e4e7;
-  color: #00494d;
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(183deg, 100%, 15%);
   cursor: pointer;
 }
 
 input {
-  background-color: #f4fafa;
+  background-color: hsl(180deg, 33%, 97%);
   min-height: 4rem;
   border-radius: 5px;
   text-align: right;
-  color: #00494d;
+  color: hsl(183deg, 100%, 15%);
   padding: 1rem;
 }
 input:focus-visible {
-  outline: 2px solid #c5e4e7;
+  outline: 2px solid hsl(185deg, 41%, 84%);
 }
 input:not(#custom) {
   margin-top: 1rem;

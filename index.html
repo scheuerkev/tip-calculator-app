@@ -25,20 +25,32 @@
     <main>
       <section class="app">
         <div class="app__inputs">
-          <label for="bill">Bill</label>
-          <input id="bill" name="bill" type="number" value="142.55" />
-          <div class="amount-selection">
-            <label>Select Tip %</label>
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
-            <input type="number" id="custom" placeholder="Custom" />
+          <div class="label">
+            <label for="bill">Bill</label>
+            <span class="alert" id="bill-alert"></span>
           </div>
-
-          <label for="num-of-ppl">Number of People</label>
-          <input id="num-of-ppl" name="bill" type="number" value="5" />
+          <input id="bill" name="bill" type="number" value="142.55" class="" />
+          <div class="amount-selection" id="tip-selectors">
+            <label>Select Tip %</label>
+            <button class="tip-btn" value="5">5%</button>
+            <button class="tip-btn" value="10">10%</button>
+            <button class="tip-btn" value="15">15%</button>
+            <button class="tip-btn" value="25">25%</button>
+            <button class="tip-btn" value="50">50%</button>
+            <input type="number" id="custom-tip" placeholder="Custom" />
+          </div>
+          <div class="label">
+            <label for="num-of-ppl">Number of People</label>
+            <span class="alert" id="people-alert"></span>
+          </div>
+          <input
+            id="num-of-ppl"
+            name="bill"
+            type="number"
+            value="5"
+            min="1"
+            max="99"
+          />
         </div>
         <div class="app__results">
           <div class="app__results--line">
@@ -47,14 +59,14 @@
                 <span>Tip Amount</span>
                 <span>/ person</span>
               </div>
-              <span class="tip__amount--result">$4.27</span>
+              <span id="tip-pp" class="tip__amount--result">$4.27</span>
             </div>
             <div class="tip">
               <div class="tip__total">
                 <span>Total</span>
                 <span>/ person</span>
               </div>
-              <span class="tip__total--result">$32.79</span>
+              <span id="total-pp" class="tip__total--result">$32.79</span>
             </div>
           </div>
           <button id="reset_calc" type="reset">Reset</button>
@@ -76,5 +88,6 @@
         >.
       </p>
     </footer>
+    <script src="./public/js/index.js"></script>
   </body>
 </html>

@@ -85,3 +85,17 @@
     }
   }
 }
+
+.label {
+  display: flex;
+  &>label {
+    flex: 1;
+  }
+}
+
+.input-alert {
+ 
+    outline: 2px solid $alert-color !important;
+    //background-color: $alert-color;
+ 
+}

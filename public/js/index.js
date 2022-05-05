@@ -79,8 +79,8 @@ const calculateTotalPerPerson = (billAmount, numberOfPeople, tipAmount) => {
 
 //flush all the inputs
 const resetForm = () => {
-    billAmountInput.value = 0;
-    numberOfPeopleInput.value = 0;
+    billAmountInput.value = "";
+    numberOfPeopleInput.value = "";
     tipAmountPerPerson.innerText = "$0.00";
     totalPerPerson.innerText = "$0.00";
 }
